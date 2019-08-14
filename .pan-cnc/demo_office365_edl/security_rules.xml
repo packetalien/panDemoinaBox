@@ -33,11 +33,6 @@
       <log-setting>Default-Logging-Profile</log-setting>
     </entry>
    <entry name="{{ edl_name }}-in">
-      <profile-setting>
-        <group>
-          <member>Policy Demo</member>
-        </group>
-      </profile-setting>
       <to>
         <member>trust</member>
       </to>
