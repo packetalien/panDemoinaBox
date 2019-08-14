@@ -1,9 +1,4 @@
     <entry name="{{ edl_name }}-out">
-      <profile-setting>
-        <group>
-          <member>Policy Demo</member>
-        </group>
-      </profile-setting>
       <to>
         <member>untrust</member>
       </to>
