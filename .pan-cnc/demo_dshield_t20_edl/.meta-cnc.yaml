@@ -29,7 +29,7 @@ labels:
 variables:
   - name: edl_name
     description: Name of EDL
-    default: DshieldTop20_IPv4
+    default: Dshield_Top20_IPv4
     type_hint: text
   - name: edl_description
     description: Enter a Description
