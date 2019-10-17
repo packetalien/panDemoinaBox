@@ -1,9 +1,9 @@
 # skillet preamble information used by panhandler
 # ---------------------------------------------------------------------
 # unique snippet name
-name: demo_office365)_sharepoint_ww
+name: demo_office365_sharepoint_ww
 # label used for menu selection
-label: demo_office365)_sharepoint_ww
+label: demo_office365_sharepoint_ww
 description: This skillet implements security and decryption policies for Office365. Microsoft's common stance is 'Do not decrypt Office365'. You can start by decrypting Sharepoint.
 
 # type of device configuration
