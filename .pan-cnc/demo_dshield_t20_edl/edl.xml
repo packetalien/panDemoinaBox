@@ -1,11 +1,11 @@
-<entry name="{{ edl_name }}">
+<entry name="OSINT-DShield-top-20">
         <type>
           <ip>
             <recurring>
               <hourly/>
             </recurring>
             <certificate-profile>None</certificate-profile>
-            <url>{{ url }}</url>
+            <url>https://192.168.35.132/feeds/isc-dshield-top-20-ipv4</url>
           </ip>
         </type>
-      </entry>
+</entry>
