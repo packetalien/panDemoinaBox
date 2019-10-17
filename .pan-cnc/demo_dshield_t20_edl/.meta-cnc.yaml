@@ -4,7 +4,7 @@
 name: diab-skillet-dshield-t20-demo
 # label used for menu selection
 label: diab-skillet-dshield-t20-demo
-description: This skillet implements an EDL in Demo in a Box (LiaB) using the DShield Top 20 feed on SE Tools through Mine Meld. It is the pre-work setup for the demo.
+description: This skillet implements an OSINT EDL in Demo in a Box (LiaB) using the DShield Top 20 feed on SE Tools through Mine Meld.
 
 # type of device configuration
 # common types are panorama, panos, and template
@@ -27,21 +27,9 @@ labels:
 # type_hint defines the form field used by panhandler
 # type_hints can be text, ip_address, or dropdown
 variables:
-  - name: edl_name
-    description: Name of EDL
-    default: Dshield_Top20_IPv4
-    type_hint: text
-  - name: edl_description
-    description: Enter a Description
-    default: Dshield Top 20 IPv4 Feed
-    type_hint: text
-  - name: url
-    description: Source url
-    type_hint: text
-    default: https://192.168.35.132/feeds/isc-dshield-top-20-ipv4
   - name: tag_name
-    description: Tag Name
-    default: EDL
+    description: OSINT tag name for ISC DShield feed
+    default: OSINT
     type_hint: text
   - name: tag_color
     description: Choose Color
@@ -54,6 +42,10 @@ variables:
         value: color3
       - key: Green
         value: color22
+  - name: tag_description
+    description: Tag description
+    default: OSINT Feeds
+    type_hint: text
 # ---------------------------------------------------------------------
 # end of variables section
 

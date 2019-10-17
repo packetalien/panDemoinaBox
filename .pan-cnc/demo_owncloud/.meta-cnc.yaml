@@ -4,7 +4,7 @@
 name: diab-skillet-office365-demo
 # label used for menu selection
 label: diab-skillet-office365-demo
-description: This skillet implements an EDL in Demo in a Box (LiaB) using the Office365 feed on SE Tools through Mine Meld. It is the pre-work setup for the demo.
+description: This skillet implements the OwnCloud policies needed for the demo.
 
 # type of device configuration
 # common types are panorama, panos, and template
@@ -27,25 +27,13 @@ labels:
 # type_hint defines the form field used by panhandler
 # type_hints can be text, ip_address, or dropdown
 variables:
-  - name: edl_name
-    description: Name of EDL
-    default: office365_IPv4
-    type_hint: text
-  - name: edl_description
-    description: Enter a Description
-    default: Office365 Mine Meld IPv4 Feed
-    type_hint: text
-  - name: url
-    description: Source url
-    type_hint: text
-    default: https://192.168.35.132/feeds/o365-any-any-ipv4-feed
   - name: tag_name
     description: Tag Name
-    default: EDL
+    default: OwnCloud
     type_hint: text
   - name: tag_color
     description: Choose Color
-    default: Red
+    default: Blue
     type_hint: dropdown
     dd_list:
       - key: Red
@@ -54,6 +42,10 @@ variables:
         value: color3
       - key: Green
         value: color22
+  - name: tag_description
+    description: Tag description
+    default: OwnCloud rules and polices
+    type_hint: text
 # ---------------------------------------------------------------------
 # end of variables section
 
@@ -65,11 +57,11 @@ snippets:
   - name: tag
     xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/tag
     file: tag.xml
-  - name: edl_list
-    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/external-list
-    file: edl.xml
-  - name: edl_list
+  - name: security_list
     xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules
     file: security_rules.xml
+  - name: nat_list
+    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/nat/rules
+    file: nat_rules.xml
 # ---------------------------------------------------------------------
 # end of snippets section

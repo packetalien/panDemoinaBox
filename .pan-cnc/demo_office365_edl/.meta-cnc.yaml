@@ -4,7 +4,7 @@
 name: diab-skillet-office365-demo
 # label used for menu selection
 label: diab-skillet-office365-demo
-description: This skillet implements an EDL in Demo in a Box (LiaB) using the Office365 feed on SE Tools through Mine Meld. It is the pre-work setup for the demo.
+description: This is a simple Operational EDL Skillet using Office365.
 
 # type of device configuration
 # common types are panorama, panos, and template

@@ -1,4 +1,4 @@
-  <entry name="Inbound Owncloud">
+  <entry name="Public Inbound Owncloud">
     <destination-translation>
       <translated-address>owncloud-server-inside</translated-address>
     </destination-translation>
@@ -19,6 +19,7 @@
     </tag>
     <service>any</service>
     <group-tag>Service</group-tag>
+    <description>This NAT rule allows traffic from the Untrust port.</description>
   </entry>
   <entry name="U-Turn Outbound for OwnCloud">
     <destination-translation>
@@ -37,4 +38,7 @@
       <member>owncloud-server-outside</member>
     </destination>
     <service>any</service>
+    <tag>
+      <member>Service</member>
+    </tag>
   </entry>
