@@ -1,9 +1,9 @@
 # skillet preamble information used by panhandler
 # ---------------------------------------------------------------------
 # unique snippet name
-name: diab-skillet-office365-demo
+name: diab-skillet-owncloud-demo
 # label used for menu selection
-label: diab-skillet-office365-demo
+label: diab-skillet-owncloud-demo
 description: This skillet implements the OwnCloud policies needed for the demo.
 
 # type of device configuration

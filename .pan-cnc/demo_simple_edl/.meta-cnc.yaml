@@ -1,10 +1,10 @@
 # skillet preamble information used by panhandler
 # ---------------------------------------------------------------------
 # unique snippet name
-name: diab-skillet-simple-edl-demo
+name: diab-skillet-simple-soc-conviction-edl-demo
 # label used for menu selection
-label: diab-skillet-simple-edl-demo
-description: This skillet implements an EDL in Demo in a Box (LiaB) using a simple text file on SE Tools as the feed. It is the pre-work setup for the demo.
+label: diab-skillet-simple-soc-conviction-edl-demo
+description: This skillet implements a simple feed to demonstrate SOC convictions in an automated fashion. It uses a flat text file on SE Tools as the feed.
 
 # type of device configuration
 # common types are panorama, panos, and template
@@ -27,18 +27,6 @@ labels:
 # type_hint defines the form field used by panhandler
 # type_hints can be text, ip_address, or dropdown
 variables:
-  - name: edl_name
-    description: Name of EDL
-    default: SOC Convicted Offenders
-    type_hint: text
-  - name: edl_description
-    description: Enter a Description
-    default: Convicted IPv4 Offenders
-    type_hint: text
-  - name: url
-    description: Source url
-    type_hint: text
-    default: https://192.168.35.132/convicted.txt
   - name: tag_name
     description: Tag Name
     default: EDL
