@@ -1,12 +1,12 @@
 <entry name="o365-worldwide-sharepoint-url-feed">
         <type>
-          <ip>
+          <url>
             <recurring>
               <hourly/>
             </recurring>
             <certificate-profile>None</certificate-profile>
             <url>https://192.168.35.132/feeds/o365-worldwide-sharepoint-url-feed</url>
-          </ip>
+          </url>
         </type>
       </entry>
 <entry name="o365-worldwide-sharepoint-ipv4-feed">
@@ -33,13 +33,13 @@
       </entry>
 <entry name="o365-all-url-feed-sharepoint-demo">
         <type>
-          <ip>
+          <url>
             <recurring>
               <hourly/>
             </recurring>
             <certificate-profile>None</certificate-profile>
             <url>https://192.168.35.132/feeds/o365-any-any-url-feed</url>
-          </ip>
+          </url>
         </type>
       </entry>
 <entry name="o365-all-ipv4-feed-sharepoint-demo">
