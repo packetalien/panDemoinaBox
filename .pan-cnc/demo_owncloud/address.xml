@@ -1,0 +1,6 @@
+<entry name="owncloud-server-inside">
+<ip-netmask>192.168.35.136</ip-netmask>
+</entry>
+<entry name="owncloud-server-outside">
+<ip-netmask>192.168.55.136</ip-netmask>
+</entry>

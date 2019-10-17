@@ -1,0 +1,68 @@
+# skillet preamble information used by panhandler
+# ---------------------------------------------------------------------
+# unique snippet name
+name: demo_office365)_sharepoint_ww
+# label used for menu selection
+label: demo_office365)_sharepoint_ww
+description: This skillet implements security and decryption policies for Office365. Microsoft's common stance is 'Do not decrypt Office365'. You can start by decrypting Sharepoint.
+
+# type of device configuration
+# common types are panorama, panos, and template
+# https://github.com/PaloAltoNetworks/panhandler/blob/develop/docs/metadata_configuration.rst
+type: panos
+# preload static or default-based templates
+extends:
+
+# grouping of like snippets for dynamic menu creation in panhandler
+labels:
+  collection:
+    - Demo in a Box Collection
+
+# ---------------------------------------------------------------------
+# end of preamble section
+
+# variables section
+# ---------------------------------------------------------------------
+# variables used in the configuration templates
+# type_hint defines the form field used by panhandler
+# type_hints can be text, ip_address, or dropdown
+variables:
+  - name: tag_name
+    description: Tag name for all demo rules created by this skillet.
+    default: Office365Decrypt
+    type_hint: text
+  - name: tag_color
+    description: Choose Color
+    default: Green
+    type_hint: dropdown
+    dd_list:
+      - key: Red
+        value: color1
+      - key: Blue
+        value: color3
+      - key: Green
+        value: color22
+
+# ---------------------------------------------------------------------
+# end of variables section
+
+# snippets section
+# ---------------------------------------------------------------------
+# snippets used for api configuration including xpath and element as file name
+# files will load in the order listed
+snippets:
+  - name: tag
+    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/tag
+    file: tag.xml
+  - name: edl_list
+    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/external-list
+    file: edl.xml
+  - name: security_list
+    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules
+    file: security_rules.xml
+  - name: security_list
+    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/decryption/rules
+    file: decryption_rules.xml
+
+# ---------------------------------------------------------------------
+# end of snippets section

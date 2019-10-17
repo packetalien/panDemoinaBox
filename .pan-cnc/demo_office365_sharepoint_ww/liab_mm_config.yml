@@ -1,0 +1,451 @@
+nodes:
+  o365-usgovdod-any-miner:
+    inputs: []
+    output: true
+    prototype: o365-api.usgovdod-any
+  o365-usgovgcchigh-any-miner:
+    inputs: []
+    output: true
+    prototype: o365-api.usgovgcchigh-any
+  o365-china-any-miner:
+    inputs: []
+    output: true
+    prototype: o365-api.china-any
+  o365-germany-any-miner:
+    inputs: []
+    output: true
+    prototype: o365-api.germany-any
+  o365-worldwide-any-miner:
+    inputs: []
+    output: true
+    prototype: o365-api.worldwide-any
+  o365-ipv4-processor:
+    inputs:
+      - o365-worldwide-any-miner
+      - o365-germany-any-miner
+      - o365-china-any-miner
+      - o365-usgovgcchigh-any-miner
+      - o365-usgovdod-any-miner
+    output: true
+    prototype: stdlib.aggregatorIPv4Generic
+  o365-ipv6-processor:
+    inputs:
+      - o365-worldwide-any-miner
+      - o365-germany-any-miner
+      - o365-china-any-miner
+      - o365-usgovgcchigh-any-miner
+      - o365-usgovdod-any-miner
+    output: true
+    prototype: stdlib.aggregatorIPv6Simple
+  o365-url-processor:
+    inputs:
+      - o365-worldwide-any-miner
+      - o365-germany-any-miner
+      - o365-china-any-miner
+      - o365-usgovgcchigh-any-miner
+      - o365-usgovdod-any-miner
+    output: true
+    prototype: stdlib.aggregatorURL
+  o365-any-any-ipv4-feed:
+    inputs:
+      - o365-ipv4-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-any-any-ipv6-feed:
+    inputs:
+      - o365-ipv6-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-any-any-url-feed:
+    inputs:
+      - o365-url-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  isc-dshield-top-20:
+    inputs: []
+    output: true
+    prototype: dshield.block
+  bambenekconsulting-master-domain-high:
+    inputs: []
+    output: true
+    prototype: bambenekconsulting.c2_dommasterlist_high
+  bambenekconsulting-domain-agg:
+    inputs:
+      - bambenekconsulting-master-domain-high
+    output: true
+    prototype: stdlib.aggregatorDomain
+  bambenekconsulting-domain-hc:
+    inputs:
+      - bambenekconsulting-master-domain-high
+    output: false
+    prototype: stdlib.feedHCGreen
+  isc-dshield-agg-ipv4:
+    inputs:
+      - isc-dshield-top-20
+    output: true
+    prototype: stdlib.aggregatorIPv4Generic
+  isc-dshield-top-20-ipv4:
+    inputs:
+      - isc-dshield-agg-ipv4
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-worldwide-sharepoint-miner:
+    inputs: []
+    output: true
+    prototype: o365-api.worldwide-sharepoint
+  o365-worldwide-sharepoint-ipv4-feed:
+    inputs:
+      - o365-ipv4-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-worldwide-sharepoint-ipv6-feed:
+    inputs:
+      - o365-ipv6-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-worldwide-sharepoint-url-feed:
+    inputs:
+      - o365-url-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-usgovgcchigh-sharepoint-miner:
+    inputs: []
+    output: true
+    prototype: o365-api.usgovgcchigh-sharepoint
+  o365-usgovgcchigh-sharepoint-ipv4-feed:
+    inputs:
+      - o365-ipv4-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-usgovgcchigh-sharepoint-ipv6-feed:
+    inputs:
+      - o365-ipv6-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-usgovgcchigh-sharepoint-url-feed:
+    inputs:
+      - o365-url-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-usgovdod-sharepoint-miner:
+    inputs: []
+    output: true
+    prototype: o365-api.usgovdod-sharepoint
+  o365-usgovdod-sharepoint-ipv4-feed:
+    inputs:
+      - o365-ipv4-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-usgovdod-sharepoint-ipv6-feed:
+    inputs:
+      - o365-ipv6-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-usgovdod-sharepoint-url-feed:
+    inputs:
+      - o365-url-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-germany-sharepoint-miner:
+    inputs: []
+    output: true
+    prototype: o365-api.germany-sharepoint
+  o365-germany-sharepoint-ipv4-feed:
+    inputs:
+      - o365-ipv4-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-germany-sharepoint-ipv6-feed:
+    inputs:
+      - o365-ipv6-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-germany-sharepoint-url-feed:
+    inputs:
+      - o365-url-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-china-sharepoint-miner:
+    inputs: []
+    output: true
+    prototype: o365-api.china-sharepoint
+  o365-china-sharepoint-ipv4-feed:
+    inputs:
+      - o365-ipv4-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-china-sharepoint-ipv6-feed:
+    inputs:
+      - o365-ipv6-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-china-sharepoint-url-feed:
+    inputs:
+      - o365-url-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-worldwide-exchange-miner:
+    inputs: []
+    output: true
+    prototype: o365-api.worldwide-exchange
+  o365-worldwide-exchange-ipv4-feed:
+    inputs:
+      - o365-ipv4-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-worldwide-exchange-ipv6-feed:
+    inputs:
+      - o365-ipv6-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-worldwide-exchange-url-feed:
+    inputs:
+      - o365-url-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-usgovgcchigh-exchange-miner:
+    inputs: []
+    output: true
+    prototype: o365-api.usgovgcchigh-exchange
+  o365-usgovgcchigh-exchange-ipv4-feed:
+    inputs:
+      - o365-ipv4-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-usgovgcchigh-exchange-ipv6-feed:
+    inputs:
+      - o365-ipv6-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-usgovgcchigh-exchange-url-feed:
+    inputs:
+      - o365-url-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-usgovdod-exchange-miner:
+    inputs: []
+    output: true
+    prototype: o365-api.usgovdod-exchange
+  o365-usgovdod-exchange-ipv4-feed:
+    inputs:
+      - o365-ipv4-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-usgovdod-exchange-ipv6-feed:
+    inputs:
+      - o365-ipv6-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-usgovdod-exchange-url-feed:
+    inputs:
+      - o365-url-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-germany-exchange-miner:
+    inputs: []
+    output: true
+    prototype: o365-api.germany-exchange
+  o365-germany-exchange-ipv4-feed:
+    inputs:
+      - o365-ipv4-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-germany-exchange-ipv6-feed:
+    inputs:
+      - o365-ipv6-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-germany-exchange-url-feed:
+    inputs:
+      - o365-url-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-china-exchange-miner:
+    inputs: []
+    output: true
+    prototype: o365-api.china-exchange
+  o365-china-exchange-ipv4-feed:
+    inputs:
+      - o365-ipv4-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-china-exchange-ipv6-feed:
+    inputs:
+      - o365-ipv6-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-china-exchange-url-feed:
+    inputs:
+      - o365-url-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-worldwide-any-ipv4-feed:
+    inputs:
+      - o365-ipv4-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-worldwide-any-ipv6-feed:
+    inputs:
+      - o365-ipv6-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-worldwide-any-url-feed:
+    inputs:
+      - o365-url-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-usgovgcchigh-any-ipv4-feed:
+    inputs:
+      - o365-ipv4-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-usgovgcchigh-any-ipv6-feed:
+    inputs:
+      - o365-ipv6-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-usgovgcchigh-any-url-feed:
+    inputs:
+      - o365-url-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-usgovdod-any-ipv4-feed:
+    inputs:
+      - o365-ipv4-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-usgovdod-any-ipv6-feed:
+    inputs:
+      - o365-ipv6-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-usgovdod-any-url-feed:
+    inputs:
+      - o365-url-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-germany-any-ipv4-feed:
+    inputs:
+      - o365-ipv4-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-germany-any-ipv6-feed:
+    inputs:
+      - o365-ipv6-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-germany-any-url-feed:
+    inputs:
+      - o365-url-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-china-any-ipv4-feed:
+    inputs:
+      - o365-ipv4-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-china-any-ipv6-feed:
+    inputs:
+      - o365-ipv6-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-china-any-url-feed:
+    inputs:
+      - o365-url-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-china-skype-miner:
+    inputs: []
+    output: true
+    prototype: o365-api.china-skype
+  o365-china-skype-ipv4-feed:
+    inputs:
+      - o365-ipv4-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-china-skype-ipv6-feed:
+    inputs:
+      - o365-ipv6-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-china-skype-url-feed:
+    inputs:
+      - o365-url-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-germany-skype-miner:
+    inputs: []
+    output: true
+    prototype: o365-api.germany-skype
+  o365-germany-skype-ipv4-feed:
+    inputs:
+      - o365-ipv4-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-germany-skype-ipv6-feed:
+    inputs:
+      - o365-ipv6-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-germany-skype-url-feed:
+    inputs:
+      - o365-url-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-usgovdod-skype-miner:
+    inputs: []
+    output: true
+    prototype: o365-api.usgovdod-skype
+  o365-usgovdod-skype-ipv4-feed:
+    inputs:
+      - o365-ipv4-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-usgovdod-skype-ipv6-feed:
+    inputs:
+      - o365-ipv6-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-usgovdod-skype-url-feed:
+    inputs:
+      - o365-url-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-usgovgcchigh-skype-miner:
+    inputs: []
+    output: true
+    prototype: o365-api.usgovgcchigh-skype
+  o365-usgovgcchigh-skype-ipv4-feed:
+    inputs:
+      - o365-ipv4-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-usgovgcchigh-skype-ipv6-feed:
+    inputs:
+      - o365-ipv6-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-usgovgcchigh-skype-url-feed:
+    inputs:
+      - o365-url-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-worldwide-skype-miner:
+    inputs: []
+    output: true
+    prototype: o365-api.worldwide-skype
+  o365-worldwide-skype-ipv4-feed:
+    inputs:
+      - o365-ipv4-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-worldwide-skype-ipv6-feed:
+    inputs:
+      - o365-ipv6-processor
+    output: false
+    prototype: stdlib.feedHCGreen
+  o365-worldwide-skype-url-feed:
+    inputs:
+      - o365-url-processor
+    output: false
+    prototype: stdlib.feedHCGreen
