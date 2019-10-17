@@ -1,4 +1,4 @@
-    <entry name="{{ edl_name }}-out">
+    <entry name="OSINT DShield Top 20 Out">
       <to>
         <member>untrust</member>
       </to>
@@ -9,7 +9,7 @@
         <member>any</member>
       </source>
       <destination>
-        <member>{{ edl_name }}</member>
+        <member>OSINT-DShield-top-20</member>
       </destination>
       <source-user>
         <member>any</member>
@@ -32,7 +32,7 @@
       <action>allow</action>
       <log-setting>Default-Logging-Profile</log-setting>
     </entry>
-   <entry name="{{ edl_name }}-in">
+   <entry name="OSINT DShield Top 20 In">
       <to>
         <member>trust</member>
       </to>
@@ -40,7 +40,7 @@
         <member>untrust</member>
       </from>
       <source>
-        <member>{{ edl_name }}</member>
+        <member>OSINT-DShield-top-20</member>
       </source>
       <destination>
         <member>any</member>
