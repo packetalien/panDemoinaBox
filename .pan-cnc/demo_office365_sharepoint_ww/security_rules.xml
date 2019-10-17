@@ -1,4 +1,4 @@
-    <entry name="MSFT Product Activation">
+    <entry name="Microsoft Product Activation">
       <to>
         <member>trust</member>
       </to>
@@ -32,7 +32,7 @@
       <action>allow</action>
       <log-setting>Default-Logging-Profile</log-setting>
     </entry>
-    <entry name="MSFT Office 365 Enterprise">
+    <entry name="Microsoft Office 365 Enterprise">
       <to>
         <member>trust</member>
       </to>
@@ -67,7 +67,7 @@
       <action>allow</action>
       <log-setting>Default-Logging-Profile</log-setting>
     </entry>
-    <entry name="MSFT Office 365 Base">
+    <entry name="Microsoft Office 365 Base">
       <to>
         <member>trust</member>
       </to>
@@ -104,7 +104,7 @@
       <action>allow</action>
       <log-setting>Default-Logging-Profile</log-setting>
     </entry>
-    <entry name="MSFT Outlook">
+    <entry name="Microsoft Outlook">
       <to>
         <member>trust</member>
       </to>
@@ -143,7 +143,7 @@
       <action>allow</action>
       <log-setting>Default-Logging-Profile</log-setting>
     </entry>
-    <entry name="MSFT Skype for Business">
+    <entry name="Microsoft Skype for Business">
       <to>
         <member>trust</member>
       </to>
@@ -182,47 +182,7 @@
       <action>allow</action>
       <log-setting>Default-Logging-Profile</log-setting>
     </entry>
-    <entry name="MSFT OneDrive and Office Online">
-      <to>
-        <member>trust</member>
-      </to>
-      <from>
-        <member>untrust</member>
-      </from>
-      <source>
-        <member>any</member>
-      </source>
-      <destination>
-        <member>o365-all-ipv4-feed-sharepoint-demo</member>
-        <member>o365-all-ipv6-feed-sharepoint-demo</member>
-      </destination>
-      <source-user>
-        <member>any</member>
-      </source-user>
-      <category>
-        <member>o365-all-url-feed-sharepoint-demo</member>
-      </category>
-      <application>
-        <member>ms-onedrive</member>
-        <member>sharepoint-online</member>
-        <member>sharepoint-online-downloading</member>
-        <member>sharepoint-online-editing</member>
-        <member>sharepoint-online-sharing</member>
-        <member>sharepoint-online-uploading</member>
-      </application>
-      <service>
-        <member>any</member>
-      </service>
-      <hip-profiles>
-        <member>any</member>
-      </hip-profiles>
-      <tag>
-        <member>{{ tag_name }}</member>
-      </tag>
-      <action>allow</action>
-      <log-setting>Default-Logging-Profile</log-setting>
-    </entry>
-    <entry name="MSFT OneDrive and Office Online">
+    <entry name="Microsoft OneDrive and Office Online">
       <to>
         <member>trust</member>
       </to>
