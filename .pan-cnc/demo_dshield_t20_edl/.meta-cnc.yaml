@@ -3,7 +3,7 @@
 # unique snippet name
 name: diab-skillet-dshield-t20-demo
 # label used for menu selection
-label: diab-skillet-dshield-t20-demo
+label: Implements DShield Top 20 EDL as deny policies
 description: This skillet implements an OSINT EDL in Demo in a Box (LiaB) using the DShield Top 20 feed on SE Tools through Mine Meld.
 
 # type of device configuration

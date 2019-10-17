@@ -3,7 +3,7 @@
 # unique snippet name
 name: diab-skillet-simple-soc-conviction-edl-demo
 # label used for menu selection
-label: diab-skillet-simple-soc-conviction-edl-demo
+label: Simple SOC Conviction Demo
 description: This skillet implements a simple feed to demonstrate SOC convictions in an automated fashion. It uses a flat text file on SE Tools as the feed.
 
 # type of device configuration

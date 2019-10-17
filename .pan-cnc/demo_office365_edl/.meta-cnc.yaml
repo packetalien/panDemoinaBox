@@ -3,7 +3,7 @@
 # unique snippet name
 name: diab-skillet-office365-demo
 # label used for menu selection
-label: diab-skillet-office365-demo
+label: Implements Super Simple Office365 EDL
 description: This is a simple Operational EDL Skillet using Office365.
 
 # type of device configuration

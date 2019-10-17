@@ -3,7 +3,7 @@
 # unique snippet name
 name: diab-skillet-owncloud-demo
 # label used for menu selection
-label: diab-skillet-owncloud-demo
+label: Implements OwnCloud Demo Policies and NAT
 description: This skillet implements the OwnCloud policies needed for the demo.
 
 # type of device configuration
