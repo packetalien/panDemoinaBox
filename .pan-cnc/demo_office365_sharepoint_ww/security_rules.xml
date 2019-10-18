@@ -56,7 +56,7 @@
         <member>office365-enterprise-access</member>
       </application>
       <service>
-        <member>any</member>
+        <member>application-default</member>
       </service>
       <hip-profiles>
         <member>any</member>
@@ -93,7 +93,7 @@
         <member>soap</member>
       </application>
       <service>
-        <member>any</member>
+        <member>application-default</member>
       </service>
       <hip-profiles>
         <member>any</member>
@@ -132,7 +132,7 @@
         <member>rpc-over-http</member>
       </application>
       <service>
-        <member>any</member>
+        <member>application-default</member>
       </service>
       <hip-profiles>
         <member>any</member>
@@ -171,7 +171,7 @@
         <member>stun</member>
       </application>
       <service>
-        <member>any</member>
+        <member>application-default</member>
       </service>
       <hip-profiles>
         <member>any</member>
@@ -211,7 +211,7 @@
         <member>sharepoint-online-uploading</member>
       </application>
       <service>
-        <member>any</member>
+        <member>application-default</member>
       </service>
       <hip-profiles>
         <member>any</member>
@@ -247,7 +247,7 @@
         <member>web-browsing</member>
       </application>
       <service>
-        <member>any</member>
+        <member>application-default</member>
       </service>
       <hip-profiles>
         <member>any</member>
