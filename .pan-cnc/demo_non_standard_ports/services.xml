@@ -7,9 +7,6 @@
         </override>
       </tcp>
     </protocol>
-    <tag>
-    <member></member>
-    </tag>
   </entry>
   <entry name="service-rdp">
     <protocol>
@@ -20,9 +17,6 @@
         </override>
       </tcp>
     </protocol>
-    <tag>
-    <member></member>
-    </tag>
   </entry>
   <entry name="service-ssh">
     <protocol>
@@ -33,7 +27,4 @@
         </override>
       </tcp>
     </protocol>
-    <tag>
-    <member></member>
-    </tag>
   </entry>
