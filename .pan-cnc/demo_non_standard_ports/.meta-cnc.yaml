@@ -35,7 +35,7 @@ labels:
 # files will load in the order listed
 snippets:
   - name: service_list
-    xpath: /config/shared/service/entry
+    xpath: /config/shared/service
     file: services.xml
   - name: security_list
     xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules
