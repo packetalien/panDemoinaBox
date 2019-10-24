@@ -1,10 +1,10 @@
 # skillet preamble information used by panhandler
 # ---------------------------------------------------------------------
 # unique snippet name
-name: diab-skillet-owncloud-demo
+name: diab-skillet-non-standard-ports-demo
 # label used for menu selection
-label: Implements OwnCloud Demo Policies and NAT
-description: This skillet implements the OwnCloud policies needed for the demo.
+label: Implements policies needed for non-standard ports demo.
+description: This skillet implements L4 demo rules that accompany the non-standard ports demo.
 
 # type of device configuration
 # common types are panorama, panos, and template
@@ -26,26 +26,6 @@ labels:
 # variables used in the configuration templates
 # type_hint defines the form field used by panhandler
 # type_hints can be text, ip_address, or dropdown
-variables:
-  - name: tag_name
-    description: Tag Name
-    default: OwnCloud
-    type_hint: text
-  - name: tag_color
-    description: Choose Color
-    default: Blue
-    type_hint: dropdown
-    dd_list:
-      - key: Red
-        value: color1
-      - key: Blue
-        value: color3
-      - key: Green
-        value: color22
-  - name: tag_description
-    description: Tag description
-    default: OwnCloud rules and polices
-    type_hint: text
 # ---------------------------------------------------------------------
 # end of variables section
 
@@ -54,14 +34,11 @@ variables:
 # snippets used for api configuration including xpath and element as file name
 # files will load in the order listed
 snippets:
-  - name: tag
-    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/tag
-    file: tag.xml
   - name: security_list
     xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules
     file: security_rules.xml
-  - name: nat_list
-    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/nat/rules
-    file: nat_rules.xml
+  - name: service_list
+    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/objects/services
+    file: services.xml
 # ---------------------------------------------------------------------
 # end of snippets section
