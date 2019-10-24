@@ -1,9 +1,9 @@
     <entry name="Microsoft Product Activation">
       <to>
-        <member>trust</member>
+        <member>untrust</member>
       </to>
       <from>
-        <member>untrust</member>
+        <member>trust</member>
       </from>
       <source>
         <member>any</member>
@@ -34,10 +34,10 @@
     </entry>
     <entry name="Microsoft Office 365 Enterprise">
       <to>
-        <member>trust</member>
+        <member>untrust</member>
       </to>
       <from>
-        <member>untrust</member>
+        <member>trust</member>
       </from>
       <source>
         <member>any</member>
@@ -69,10 +69,10 @@
     </entry>
     <entry name="Microsoft Office 365 Base">
       <to>
-        <member>trust</member>
+        <member>untrust</member>
       </to>
       <from>
-        <member>untrust</member>
+        <member>trust</member>
       </from>
       <source>
         <member>any</member>
@@ -106,10 +106,10 @@
     </entry>
     <entry name="Microsoft Outlook">
       <to>
-        <member>trust</member>
+        <member>untrust</member>
       </to>
       <from>
-        <member>untrust</member>
+        <member>trust</member>
       </from>
       <source>
         <member>any</member>
@@ -145,10 +145,10 @@
     </entry>
     <entry name="Microsoft Skype for Business">
       <to>
-        <member>trust</member>
+        <member>untrust</member>
       </to>
       <from>
-        <member>untrust</member>
+        <member>trust</member>
       </from>
       <source>
         <member>any</member>
@@ -184,10 +184,10 @@
     </entry>
     <entry name="Microsoft OneDrive and Office Online">
       <to>
-        <member>trust</member>
+        <member>untrust</member>
       </to>
       <from>
-        <member>untrust</member>
+        <member>trust</member>
       </from>
       <source>
         <member>any</member>
@@ -224,10 +224,10 @@
     </entry>
     <entry name="SSL and Web for Office 365">
       <to>
-        <member>trust</member>
+        <member>untrust</member>
       </to>
       <from>
-        <member>untrust</member>
+        <member>trust</member>
       </from>
       <source>
         <member>any</member>
