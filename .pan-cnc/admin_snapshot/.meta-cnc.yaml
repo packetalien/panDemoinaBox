@@ -27,7 +27,7 @@ labels:
 # type_hint defines the form field used by panhandler
 # type_hints can be text, ip_address, or dropdown
 variables:
-  - name: liab_vm
+  - name: vm
     description: Choose a LiaB VM to Snapshot
     default: panpanosvm50
     type_hint: dropdown
@@ -56,14 +56,7 @@ variables:
 # snippets used for api configuration including xpath and element as file name
 # files will load in the order listed
 snippets:
-  - name: tag
-    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/tag
-    file: tag.xml
-  - name: security_list
-    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules
-    file: security_rules.xml
-  - name: nat_list
-    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/nat/rules
-    file: nat_rules.xml
+  - name: script
+    file: ./admin_snapshot.py
 # ---------------------------------------------------------------------
 # end of snippets section
