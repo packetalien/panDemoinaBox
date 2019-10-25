@@ -26,11 +26,13 @@ from vmfuscon import vmfuscon
 
 #Arguments passed from user input from meta-cnc file
 parser = argparse.ArgumentParser(description='Get meta-cnc Params')
-parser.add_argument("-v", "--liab_vm", help="Get the VM to Snapshot", required=True)
+parser.add_argument("-v", "--vm", help="Get the VM to Snapshot", required=True)
+args = parser.parse_args()
+
 
 # Get the VM Name from meta-cnc
 try:
-    snapvm = args.liab_vm
+    snapvm = args.vm
     # Create VMWare Fusion Controller Class
     snapshot = vmfuscon(snapvm)
     print("Snapshot in progress")
