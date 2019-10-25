@@ -1,0 +1,69 @@
+# skillet preamble information used by panhandler
+# ---------------------------------------------------------------------
+# unique snippet name
+name: admin_snapshot
+# label used for menu selection
+label: Snapshot LiaB VM (timestamped)
+description: This skillet takes a snapshot of the local VM.
+
+# type of device configuration
+# common types are panorama, panos, and template
+# https://github.com/PaloAltoNetworks/panhandler/blob/develop/docs/metadata_configuration.rst
+type: python
+# preload static or default-based templates
+extends:
+
+# grouping of like snippets for dynamic menu creation in panhandler
+labels:
+  collection:
+    - Control Panel Functions (cnc-control-panel required)
+
+# ---------------------------------------------------------------------
+# end of preamble section
+
+# variables section
+# ---------------------------------------------------------------------
+# variables used in the configuration templates
+# type_hint defines the form field used by panhandler
+# type_hints can be text, ip_address, or dropdown
+variables:
+  - name: liab_vm
+    description: Choose a LiaB VM to Snapshot
+    default: panpanosvm50
+    type_hint: dropdown
+    dd_list:
+      - key: pan-panos-vm50
+        value: panpanosvm50
+      - key: oss-setools-linux
+        value: osssetoolslinux
+      - key: msft-tmsclient-w10
+        value: msfttmsclient-w10
+      - key: msft-esm-dc
+        value: msftesmdc
+      - key: msft-victim-w7
+        value: msfttmsclient-w10
+      - key: msft-rodc
+        value: msftrodc
+      - key: oss-tmsclient-linux
+        value: oss-tmsclient-linux
+      - key: pan-panorama
+        value: panpanorama
+# ---------------------------------------------------------------------
+# end of variables section
+
+# snippets section
+# ---------------------------------------------------------------------
+# snippets used for api configuration including xpath and element as file name
+# files will load in the order listed
+snippets:
+  - name: tag
+    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/tag
+    file: tag.xml
+  - name: security_list
+    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules
+    file: security_rules.xml
+  - name: nat_list
+    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/nat/rules
+    file: nat_rules.xml
+# ---------------------------------------------------------------------
+# end of snippets section
