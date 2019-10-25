@@ -9,7 +9,7 @@ description: This skillet takes a snapshot of the local VM.
 # type of device configuration
 # common types are panorama, panos, and template
 # https://github.com/PaloAltoNetworks/panhandler/blob/develop/docs/metadata_configuration.rst
-type: python
+type: python3
 # preload static or default-based templates
 extends:
 
