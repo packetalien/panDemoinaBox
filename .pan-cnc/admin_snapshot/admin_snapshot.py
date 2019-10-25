@@ -31,17 +31,18 @@ args = parser.parse_args()
 
 
 # Get the VM Name from meta-cnc
-try:
-    snapvm = args.vm
-    # Create VMWare Fusion Controller Class
-    snapshot = vmfuscon(snapvm)
-    print("Snapshot in progress")
-    print("\n")
-    # Create timestamp'd snapshot
-    snapshot.snap_vm()
-    print("Snapshot successful")
-except:
-    print("Something went wrong with snapshot, please check controller.log for details.")
+def cnc_snapshot():
+    try:
+        snapvm = args.vm
+        # Create VMWare Fusion Controller Class
+        snapshot = vmfuscon(snapvm)
+        print("Snapshot in progress")
+        print("\n")
+        # Create timestamp'd snapshot
+        snapshot.snap_vm()
+        print("Snapshot successful")
+    except:
+        print("Something went wrong with snapshot, please check controller.log for details.")
 
 # Main included "just" in case this file is executed directly
 if __name__ == "__main__":
@@ -62,7 +63,7 @@ if __name__ == "__main__":
     except:
         print("Something went wrong with snapshot, please check controller.log for details.")
 
-
+cnc_snapshot()
 
 
 
